@@ -3,7 +3,7 @@
 {
 "FROM":
 [
-"/DMO/TRAVEL_M"
+"ZGKG_TRAVEL"
 ],
 "ASSOCIATED":
 [
@@ -14,7 +14,9 @@
 "ZGKG_BOOKING"
 ],
 "BASE":
-[],
+[
+"ZGKG_TRAVEL"
+],
 "ANNO_REF":
 [],
 "SCALAR_FUNCTION":

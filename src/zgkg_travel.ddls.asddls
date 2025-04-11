@@ -1,8 +1,12 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Travel Root by RAP'
 @Metadata.ignorePropagatedAnnotations: true
+
+
 define root view entity ZGKG_TRAVEL as select from /dmo/travel_m
 //composition of target_data_source_name as _association_name
+
+composition[0..*] of ZGKG_BOOKING as _Booking
 
 // associations -- loose coupling to get dependent data
 association[1] to /DMO/I_Agency as _Agency on 
@@ -42,5 +46,6 @@ $projection.OverallStatus = _OverAllStatus.OverallStatus
         _Agency,
         _Customer,
         _Currency,
-        _OverAllStatus
+        _OverAllStatus,
+        _Booking
 }
